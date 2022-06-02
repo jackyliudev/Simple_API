@@ -44,6 +44,6 @@ function getCharacter(req,res){
 app.get('/',landingPage)
 app.get('/api', getCharacter)
 
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || PORT,()=>{
     console.log(`Listening on ${PORT}`)
 })
